@@ -1,117 +1,515 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="buttons.css">
-  <link rel="stylesheet" href="text.css">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="JScode.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  <title>Training on Basic Concepts in Electrical Engineering</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
-  <img src="images/Title.jpg">
-  <p class="wholepage-title">
-    Training on Basic Concept in Electrical Engineering
-  </p>
-  <h2 class="objective-title">
-    What you'll learn from this course:
-    <ul>
-      <div class="row">
-        <div class="column">
-          <li>Ohm’s law, Kirchhoff's Voltage Law (KVL), Kirchhoff's Current Law (KCL)
-          </li>
-        </div>
-        <div class="column">
-          <li>
-            Fundamental knowledge of photovoltaic (PV) panels
-          </li>
+
+  <header>
+    <h1>Training on Basic Concepts in Electrical Engineering</h1>
+    <nav>
+      <ul>
+        <li><a href="#Description">Description</a></li>
+        <li><a href="#SectionI">Ohm's Law</a></li>
+        <li><a href="#SectionII">KVL</a></li>
+        <li><a href="#SectionIII">KCL</a></li>
+        <li><a href="#SectionIV">PV Characteristics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <img src="images/Title.jpg" alt="Working in an EE lab">
+
+  <main>
+
+    <section role="region" aria-labelledby="Description">
+      <h2 id="Description">Description</h2>
+      <div class="DescriptionBlock">
+        <h3> What you'll learn from this course:</h3>
+        <div class="flex-container">
+          <div class="List">
+            <li>Ohm’s law, Kirchhoff's Voltage Law (KVL), Kirchhoff's Current Law (KCL)</li>
+            <li>Fundamental knowledge of photovoltaic (PV) panels</li>
+          </div>
+          <div class="List">
+            <li>Apply those principles for design, analysis, and testing in EE</li>
+            <li>Recognize the relationship between PV panel output voltage/current and the temperature and sun radius
+            </li>
+          </div>
         </div>
 
+        <h3>Requirements:</h3>
+        <li>
+          Complete the quizzes with 100% correct for each seciton
+        </li>
       </div>
-      <div class="row">
-        <div class="column">
-          <li>
-            Apply those principles for design, analysis, and testing in EE
-          </li>
-        </div>
-        <div class="column">
-          <li>
-            Recognize the relationship between PV panel output voltage/current and the temperature and sun radius
-          </li>
+    </section>
+
+
+    <section role="region" aria-labelledby="SectionI">
+      <h2 id="SectionI">Section I: Ohm's Law</h2>
+      <div class="SectionContent">
+        <h3>Definition:</h3>
+        <p class="TextContent">Ohm's law states that the current through a conductor between two points is directly
+          proportional to the voltage across the two points.</p>
+        <h3>Circuit and equation:</h3>
+        <div class="circuit-container">
+          <div>
+            <img src="images/OhmsLaw.png" class="ohmslaw" alt="Ohm's law">
+          </div>
+          <div>
+            $$I = {V \over R}, \space OR \space Current = {Voltage \over Resistance}.$$
+          </div>
         </div>
 
+
+        <h3>Discussion:</h3>
+        <p class="TextContent">
+        <ul>
+          <li>Ohm's law states that the R in this relation is constant, independent of the current.</li>
+          <li>If the resistance is not constant, the previous equation cannot be called Ohm's law, but it can still be
+            used as a definition of static/DC resistance.</li>
+          <li>Ohm's law is an empirical relation which accurately describes the conductivity of the vast majority of
+            electrically conductive materials over many orders of magnitude of current. However some materials do not
+            obey Ohm's law; these are called non-ohmic.
+          <li>
+            Ohm's law was named after the German physicist <a href="https://en.wikipedia.org/wiki/Georg_Ohm">Georg
+              Ohm</a>, who, in a treatise published in 1827, described measurements of applied voltage and current
+            through simple electrical circuits containing various lengths of wire. Ohm explained his experimental
+            results by a slightly more complex equation than the modern form above.</li>
+        </ul>
+        </p>
+
+        <h3>Watch a video</h3>
+        <p> <iframe width="600px" height="450px" class="ohmslaw-video" src="https://www.youtube.com/embed/HsLLq6Rm5tU">
+          </iframe>
+        </p>
+        <p> <a href="https://www.wikihow.com/Analyze-Resistive-Circuits-Using-Ohm%27s-Law">Click to learn about How to
+            Analyze Resistive Circuits Using Ohm's Law</a></p>
       </div>
-      <!-- <li class="objective-content">Content1</li>
-               <li class="objective-content">Content2</li>
-               <li class="objective-content">Content3</li>
-               <li class="objective-content">Content4</li>       
-            -->
 
-    </ul>
-  </h2>
+    </section>
 
 
-  <h2 class="requirements-title">
-    Requirements
-    <li class="requirement-content">
-      Complete the quizzes with more than 80% correct for each seciton
-    </li>
+    <h2 id="sectionI-questions">Answering the follwing questions to review what you've learned from section I </h2>
 
-  </h2>
+    <form name="S1_quiz" id="S1_quiz">
+      <div>
+        <p> Question #1 </p>
+        <!---<p> This is an example of a _____circuit.</p>--->
+        
+        <fieldset class = "question">
+          <legend>
+               <p>This is an example of a _____circuit.</p>
+              </legend>
+          <img class="section_img" src="images/SectionI_1.png" alt="Series circuit">
+          <p>
+            <label for="S1-q1-a1">
+              <input type="radio" id="S1-q1-a1" name="S1_q1" value="Open" />Open
+            </label>
+          </p>
+          <p>
+            <label for="S1-q1-a2">
+              <input type="radio" id="S1-q1-a2" name="S1_q1" value="Series" />Series
+            </label>
+          </p>
+          <p>
+            <label for="S1-q1-a3">
+              <input type="radio" id="S1-q1-a3" name="S1_q1" value="Parallel" />Parallel
+            </label>
+          </p>
+          <p>
+            <label for="S1-q1-a4">
+              <input type="radio" id="S1-q1-a4" name="S1_q1" value="Square" />Square
+            </label>
+          </p>
+        </fieldset>
+      </div>
 
-  <h2 class="CourseContent-Title">
-    Course Content
-  </h2>
-  <h3 class="SectionI">Section I</h3>
-  <ul>
-    <h3>
-      Ohms Law Relationship
-    </h3>
-    <p>
-      <li>
-        The relation between Voltage, Current, and Resistance in any DC electrical circuit was firstly discovered by the
-        German pysicist Georg Ohm;
-      </li>
-      <li>
-        We have this equation:
-      </li>
-      <img src="images/Ohms Law.webp" class="ohmslaw">
-      <li>
-        Let's get started by watching a vedio
+      <div>
+        <p> Question #2 </p>
+        <fieldset class = "question">
+          <legend>
+        <p> This is an example of a _____circuit.</p>
+            </legend>
+        <img class="section_img" src="images/SectionI_2.png" alt="Prallel circuit">
+        <p>
+          <label for="S1-q2-a1">
+              <input type="radio" id="S1-q2-a1" name="S1_q2" value="Open" />Open
+        </p>
+                  <p>
+          <label for="S1-q2-a2">
+              <input type="radio" id="S1-q2-a2" name="S1_q2" value="Series" />Series
+        </p>
+                            <p>
+          <label for="S1-q2-a3">
+              <input type="radio" id="S1-q2-a3" name="S1_q2" value="Parallel" />Parallel
+        </p>
+           <p>
+          <label for="S1-q2-a4">
+              <input type="radio" id="S1-q2-a4" name="S1_q2" value="Dihexihedral" />Dihexihedral
+        </p>
+            </fieldset>
+       </div>
 
-      </li>
-      <iframe width="550" height="450" class="ohmslaw-vedio" src="https://www.youtube.com/embed/HsLLq6Rm5tU">
-      </iframe>
+      <div>
+        <p> Question #3 </p>
+        <fieldset class = "question">
+          <legend>
+        <p> When a current of 10.0 A flows through a 50.0-Ω resistor in a circuit, what is the voltage of that circuit?
+        </p>
+          </legend>
+        <p><label for="S1-q3-a1"><input type="radio" id="S1-q3-a1" name="S1_q3" value="5V" />5V</p>
+        <p><label for="S1-q3-a2"><input type="radio" id="S1-q3-a2" name="S1_q3" value="50V" />50V</p>
+        <p><label for="S1-q3-a3"><input type="radio" id="S1-q3-a3" name="S1_q3" value="0.5V" />0.5V</p>
+        <p><label for="S1-q3-a4"><input type="radio" id="S1-q3-a4" name="S1_q3" value="500V" />500V</p>
+        </fieldset>
+      </div>
 
+      <input type="button" name="" value="Submit" id="Submitbutton" onclick="sectionICheck()">
 
-      <li>
-        <a href="https://www.wikihow.com/Analyze-Resistive-Circuits-Using-Ohm%27s-Law">Click to learn about How to
-          Analyze Resistive Circuits Using Ohm's Law</a>
+    </form>
 
-      </li>
-
-
-
-    </p>
-
-    <li>Kirchhoff's Voltage Law (KVL)</li>
-    <li>Kirchhoff's Current Law (KCL)</li>
-  </ul>
-
-
-
-
-  </p>
-  <form>
-    <p>Ordinary input field with box outline:</p>
-    <input type="text" placeholder="Enter Something" <p>Input field without outline:</p>
-    <input type="text" class="no-outline" placeholder="Enter Something">
-  </form>
-
-  <button class="subscrbe-button">
-    Get Start!
-  </button>
+    <p id="Result_S1_quiz" onclick="Results_Clicked()"></p>
 
 
+
+
+
+    <section role="region" aria-labelledby="SectionII">
+      <h2 id="SectionII">Section II: Kirchhoff's Voltage Law (KVL)</h2>
+      <div class="SectionContent">
+        <h3>Definition:</h3>
+        <p class="SectionII-TextContent">Kirchhoff's Voltage Law(KVL) states that the directed sum of the potential
+          differences (voltages) around any closed loop is zero.</p>
+        <h3>Circuit and equation:</h3>
+                <div class="circuit-container">
+          <div>
+            <img src="images/KVL.png" class="kvlimage" alt="KVL circuit">
+          </div>
+          <div>
+           <img src="images/KVLequation.svg" class="kvlequationimage" alt="KVL equation">
+          </div>
+        </div>        
+
+        <h3>Discussion:</h3>
+        <p class="TextContent">
+        <ul>
+          <li>This law is based on the conservation of "energy given/taken by potential field" (not including energy
+            taken
+            by dissipation). Given a voltage potential, a charge which has completed a closed loop doesn't gain or lose
+            energy as it has gone back to initial potential level.</li>
+          <li>This law holds true even when resistance (which causes dissipation of energy) is present in a circuit. The
+            validity of this law in this case can be understood if one realizes that a charge in fact doesn't go back to
+            its starting point, due to dissipation of energy. A charge will just terminate at the negative terminal,
+            instead of positive terminal. This means all the energy given by the potential difference has been fully
+            consumed by resistance which in turn loses the energy as heat dissipation.
+          <li>To summarize, Kirchhoff's voltage law has nothing to do with gain or loss of energy by electronic
+            components
+            (resistors, capacitors, etc). It is a law referring to the potential field generated by voltage sources. In
+            this potential field, regardless of what electronic components are present, the gain or loss in "energy
+            given
+            by the potential field" must be zero when a charge completes a closed loop.</li>
+        </ul>
+        </p>
+        <h3> Watch a video</h3>
+        <p>
+          <iframe width="600px" height="450px" class="KVL-video" src="https://www.youtube.com/embed/dlROTnDbULo">
+          </iframe>
+        </p>
+        <p> <a class="KVLweblink"
+            href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-6/kirchhoffs-voltage-law-kvl/">Click to
+            learn about Kirchhoff’s Voltage Law in a a Series Circuit & Parallel Circuit and How to
+            Using Kirchhoff’s Voltage Law in a Complex Circuit </a></p>
+      </div>
+    </section>
+
+    <h2 id="sectionII-questions">Answering the follwing questions to review what you've learned from section II</h2>
+
+    <form name="S2_quiz" id="S2_quiz">
+      <div>
+        <p> Question #1 </p>
+        <fieldset class = "question">
+          <legend>
+        <p> KVL deals with the conservation of_____?</p>
+          </legend>
+        <p><label for="S2-q1-a1"><input type="radio" id="S2-q1-a1" name="S2_q1" value="Mass" />Mass</p>
+        <p><label for="S2-q1-a2"><input type="radio" id="S2-q1-a2" name="S2_q1" value="Momentum" />Momentum</p>
+        <p><label for="S2-q1-a3"><input type="radio" id="S2-q1-a3" name="S2_q1" value="Voltage" />Voltage</p>
+        <p><label for="S2-q1-a4"><input type="radio" id="S2-q1-a4" name="S2_q1" value="Energy" />Energy</p>
+        </fieldset>
+      </div>
+
+      <div>
+        <p> Question #2 </p>
+        <fieldset class="question">
+        <legend>
+        <p> Calculate the voltage across the 10 ohm resistor.</p></legend>
+        <img class="section_img" src="images/SectionII_2.png" alt="Question 2 circuit">
+        <p><label for="S2-q2-a1"><input type="radio" id="S2-q2-a1" name="S2_q2" value="12V" />12V</p>
+        <p><label for="S2-q2-a2"><input type="radio" id="S2-q2-a2" name="S2_q2" value="4V" />4V</p>
+        <p><label for="S2-q2-a3"><input type="radio" id="S2-q2-a3" name="S2_q2" value="10V" />10V</p>
+        <p><label for="S2-q2-a4"><input type="radio" id="S2-q2-a4" name="S2_q2" value="0V" />0V</p>
+        </fieldset>
+              </div>
+
+      <div>
+        <p> Question #3 </p>
+         <fieldset class="question">
+        <legend>
+        <p> Calculate the value of V1 and V2.</p>
+        </legend>
+        <img class="section_img" src="images/SectionII_3.PNG" alt="Question 3 circuit">
+        <p><label for="S2-q3-a1"><input type="radio" id="S2-q3-a1" name="S2_q3" value="4V,6V" />4V,6V</p>
+        <p><label for="S2-q3-a2"><input type="radio" id="S2-q3-a2" name="S2_q3" value="5V,6V" />5V,6V</p>
+        <p><label for="S2-q3-a3"><input type="radio" id="S2-q3-a3" name="S2_q3" value="6V,7V" />6V,7V</p>
+        <p><label for="S2-q3-a4"><input type="radio" id="S2-q3-a4" name="S2_q3" value="7V,8V" />7V,8V</p>
+         </fieldset>
+      </div>
+
+      <input type="button" name="" value="Submit" id="Submitbutton" onclick="sectionIICheck()">
+
+    </form>
+
+    <p id="Result_S2_quiz" onclick="Results_Clicked_S2()"></p>
+
+
+
+    <section role="region" aria-labelledby="SectionIII">
+      <h2 id="SectionIII">Section III: Kirchhoff's Current Law (KCL)</h2>
+      <div class="SectionContent">
+        <h3>Definition:</h3>
+        <p class="SectionIII-TextContent">Kirchhoffs Current Law or KCL, states that the total current or charge
+          entering a junction or node is exactly equal to the charge leaving the node as it has no other place to go
+          except to leave, as no charge is lost within the node. </p>
+        <h3>Circuit and equation:</h3>
+        <img src="images/KCL.gif" class="kclimage" alt="KCL circuit">
+        <p class="SectionIII-TextContent">Here, the three currents entering the node, I1, I2, I3 are all positive in
+          value and the two currents leaving the node, I4 and I5 are negative in value. Then this means we can also
+          rewrite the equation as: I1 + I2 + I3 – I4 – I5 = 0</p>
+        <h4>A Typical DC Circuit:</h4>
+        <img src="images/kcl2.gif" class="kclimage" alt="KCL circuit example">
+
+        <h3>The basic procedure for using Kirchhoff’s Circuit Laws is as follows:</h3>
+        <p class="TextContent">
+        <ul>
+          <li>Assume all voltages and resistances are given. ( If not label them V1, V2,… R1, R2, etc. )</li>
+          <li>Assigns a current to each branch or mesh (clockwise or anticlockwise)</li>
+          <li>Label each branch with a branch current. ( I1, I2, I3 etc. )</li>
+          <li>Find Kirchhoff’s first law equations for each node.</li>
+          <li>Find Kirchhoff’s second law equations for each of the independent loops of the circuit.</li>
+          <li>Use Linear simultaneous equations as required to find the unknown currents.</li>
+        </ul>
+        </p>
+        <h3> Watch a video</h3>
+        <p>
+          <iframe width="600px" height="450px" class="KVL-video" src="https://www.youtube.com/embed/n__cezo9R1U">
+          </iframe>
+        </p>
+        <p> <a class="KCLweblink"
+            href=https://www.problemsphysics.com/electricity/Kirchhoffs-laws-examples.html>Kirchhoff's Law of Circuits
+            with Examples</a></p>
+      </div>
+    </section>
+
+    <h2 id="sectionIII-questions">Answering the follwing questions to review what you've learned from section III</h2>
+
+    <form name="S3_quiz" id="S3_quiz">
+      <div>
+        <p> Question #1 </p>
+          <fieldset class="question">
+        <legend>
+        <p>Relation between currents according to KCL is_____?</p>
+        </legend>
+        <img class="kclimage" src="images/SectionIII_1.png" alt="Question 1 in section III">
+        <p><label for="S3-q1-a1"><input type="radio" id="S3-q1-a1" name="S3_q1" value=" i1=i2=i3=i4=i5" /> i1=i2=i3=i4=i5</p>
+        <p><label for="S3-q1-a2"><input type="radio" id="S3-q1-a2" name="S3_q1" value="i1+i4+i3=i5+i2" />i1+i4+i3=i5+i2</p>
+        <p><label for="S3-q1-a3"><input type="radio" id="S3-q1-a3" name="S3_q1" value="i1-i5=i2-i3-i4" />i1-i5=i2-i3-i4</p>
+        <p><label for="S3-q1-a4"><input type="radio" id="S3-q1-a4" name="S3_q1" value="i1+i5=i2+i3+i4" />i1+i5=i2+i3+i4</p>
+          </fieldset>
+      </div>
+
+      <div>
+        <p> Question #2 </p>
+                  <fieldset class="question">
+        <legend>
+        <p> Calculate the current across the 20 ohm resistor.</p>
+        </legend>
+        <img class="kclimage" src="images/SectionIII_2.png" alt="Question 2 in section III">
+        <p><label for="S3-q2-a1"><input type="radio" id="S3-q2-a1" name="S3_q2" value="20A" />20A</p>
+        <p><label for="S3-q2-a2"><input type="radio" id="S3-q2-a2" name="S3_q2" value="1A" />1A</p>
+        <p><label for="S3-q2-a3"><input type="radio" id="S3-q2-a3" name="S3_q2" value="0.67A" />0.67A</p>
+        <p><label for="S3-q2-a4"><input type="radio" id="S3-q2-a4" name="S3_q2" value="0.33A" />0.33A</p>
+                  </fieldset>
+      </div>
+
+      <div>
+        <p> Question #3 </p>
+                          <fieldset class="question">
+        <legend>
+        <p> KCL deals with the conservation of_____?</p>
+        </legend>
+        <p><label for="S3-q3-a1"><input type="radio" id="S3-q3-a1" name="S3_q3" value="Momentum" />Momentum</p>
+        <p><label for="S3-q3-a2"><input type="radio" id="S3-q3-a2" name="S3_q3" value="Current" />Current</p>
+        <p><label for="S3-q3-a3"><input type="radio" id="S3-q3-a3" name="S3_q3" value="Charge" />Charge</p>
+        <p><label for="S3-q3-a4"><input type="radio" id="S3-q3-a4" name="S3_q3" value="Potential Energy" />Potential Energy</p>
+                          </fieldset>
+              </div>
+
+      <input type="button" name="" value="Submit" id="Submitbutton" onclick="sectionIIICheck()">
+
+    </form>
+
+    <p id="Result_S3_quiz" onclick="Results_Clicked_S3()"></p>
+
+    </section>
+
+    <section role="region" aria-labelledby="SectionIV">
+      <h2 id="SectionIV">Section IV: PV Panel Characteristics</h2>
+      <div class="SectionContent">
+        <h3>Definition:</h3>
+        <p class="SectionIII-TextContent">A solar or photovoltaic cell has negative front contact and positive back
+          contact. A semiconductor p-n junction is in the middle of these two contacts like a battery. If these two
+          sides are connected by an external circuit, current will start flowing from positive to negative terminal of
+          the solar cell.</p>
+        <h3>Circuit and equation:</h3>
+        <p class="SectionIII-TextContent">Photovoltaic panels can be wired or connected together in either series or
+          parallel combinations, or both to increase the voltage or current capacity of the solar array. If the array
+          panels are connected together in a series combination, then the voltage increases and if connected together in
+          parallel then the current increases.The electrical power in Watts, generated by these different photovoltaic
+          combinations will still be the product of the voltage times the current, ( P = V x I ). However the solar
+          panels are connected together, the upper right hand corner will always be the maximum power point (MPP) of the
+          array.</p>
+        <img src="images/SectionIV_1.gif" class="kclimage" alt="VI characteristics of a photovoltaic array">
+
+
+        <h3>The Electrical Characteristics of a Photovoltaic Array</h3>
+        <p class="SectionIII-TextContent">The electrical characteristics of a photovoltaic array are summarised in the
+          relationship between the output current and voltage. The amount and intensity of solar insolation (solar
+          irradiance) controls the amount of output current ( I ), and the operating temperature of the solar cells
+          affects the output voltage ( V ) of the PV array. Solar cell I-V characteristic curves that summarise the
+          relationship between the current and voltage are generally provided by the panels manufacturer and are given
+          as:</p>
+        <h4>Solar Array Parameters</h4>
+        <p class="TextContent">
+        <ul>
+          <li>VOC = open-circuit voltage – This is the maximum voltage that the array provides when the terminals are
+            not connected to any load (an open circuit condition). This value is much higher than Vmp which relates to
+            the operation of the PV array which is fixed by the load. This value depends upon the number of PV panels
+            connected together in series.</li>
+          <li>ISC = short-circuit current – The maximum current provided by the PV array when the output connectors are
+            shorted together (a short circuit condition). This value is much higher than Imp which relates to the normal
+            operating circuit current.</li>
+          <li>MPP = maximum power point – This relates to the point where the power supplied by the array that is
+            connected to the load (batteries, inverters) is at its maximum value, where MPP = Imp x Vmp. The maximum
+            power point of a photovoltaic array is measured in Watts (W) or peak Watts (Wp).</li>
+          <li>FF = fill factor – The fill factor is the relationship between the maximum power that the array can
+            actually provide under normal operating conditions and the product of the open-circuit voltage multiplied by
+            the short-circuit current, ( VOC x ISC ) This fill factor value gives an idea of the quality of the array
+            and the closer the fill factor is to 1 (unity), the more power the array can provide. Typical values are
+            between 0.7 and 0.8.</li>
+          <li>%eff = percent efficiency – The efficiency of a photovoltaic array is the ratio between the maximum
+            electrical power that the array can produce compared to the amount of solar irradiance hitting the array.
+            The efficiency of a typical solar array is normally low at around 10-12%, depending on the photovoltaic type
+            (monocrystalline, polycrystalline, amorphous or thin film) of cell being used.</li>
+
+        </ul>
+        </p>
+        <h3> Watch a video</h3>
+        <p>
+          <iframe width="600px" height="450px" class="KVL-video" src="https://www.youtube.com/embed/vE7dpQef9sc">
+          </iframe>
+        </p>
+        <p> <a class="KCLweblink"
+            href=https://www.electricalengineeringtoolbox.com/2021/12/the-behavior-of-illuminated-solar-cell.html>Understanding
+            the Voltage – Current (I-V) Curve of a Solar Cell</a></p>
+      </div>
+    </section>
+
+    <h2 id="sectionIII-questions">Answering the follwing questions to review what you've learned from sectionIV</h2>
+
+    <form name="S4_quiz" id="S4_quiz">
+      <div>
+        <p> Question #1 </p>
+        <fieldset class="question">
+        <legend>
+        <p>A solar cell is a ____?</p>
+        </legend>
+        <p><label for="S4-q1-a1"><input type="radio" id="S4-q1-a1" name="S4_q1" value=" P-type semiconductor" /> P-type semiconductor</p>
+        <p><label for="S4-q1-a2"><input type="radio" id="S4-q1-a2" name="S4_q1" value="N-type semiconductor" />N-type semiconductor</p>
+        <p><label for="S4-q1-a3"><input type="radio" id="S4-q1-a3" name="S4_q1" value="Intrinsic semiconductor" />Intrinsic semiconductor</p>
+        <p><label for="S4-q1-a4"><input type="radio" id="S4-q1-a4" name="S4_q1" value="P-N Junction" />P-N Junction</p>
+      </fieldset>
+      </div>
+
+      <div>
+        <p> Question #2 </p>
+          <fieldset class="question">
+        <legend>
+        <p> The I-V characteristics of a solar cell are drawn in the fourth quadrant.</p>
+        </legend>
+        <p><label for="S4-q2-a1"><input type="radio" id="S4-q2-a1" name="S4_q2" value="True" />True</p>
+        <p><label for="S4-q2-a2"><input type="radio" id="S4-q2-a2" name="S4_q2" value="False" />False</p>
+
+          </fieldset>
+      </div>
+
+      <div>
+        <p> Question #3 </p>
+                  <fieldset class="question">
+        <legend>
+        <p> What should be the band gap of the semiconductors to be used as solar cell materials?
+        </p>
+        </legend>
+        <p><label for="S4-q3-a1"><input type="radio" id="S4-q3-a1" name="S4_q3" value="0.5 eV" />0.5 eV</p>
+        <p><label for="S4-q3-a2"><input type="radio" id="S4-q3-a2" name="S4_q3" value="1 eV" />1 eV</p>
+        <p><label for="S4-q3-a3"><input type="radio" id="S4-q3-a3" name="S4_q3" value="1.5 eV" />1.5 eV</p>
+        <p><label for="S4-q3-a4"><input type="radio" id="S4-q3-a4" name="S4_q3" value="1.9 eV" />1.9 eV</p>
+                  </fieldset>
+      </div>
+
+      <input type="button" name="" value="Submit" id="Submitbutton" onclick="sectionIVCheck()">
+
+    </form>
+
+    <p id="Result_S4_quiz" onclick="Results_Clicked_S4()"></p>
+
+    </section>
+
+
+
+
+    <!--   </p>
+    <form>
+      <p>Ordinary input field with box outline:</p>
+      <input type="text" placeholder="Enter Something" <p>Input field without outline:</p>
+      <input type="text" class="no-outline" placeholder="Enter Something">
+    </form>
+
+    <button class="subscrbe-button">
+      Get Start!
+    </button>
+-->
+
+  </main>
+
+  <footer>
+    <address>
+      <a href="https://catalog.usu.edu/preview_course_nopop.php?catoid=35&coid=287921">Internet Design &
+        Development</a><br />
+      Developed by Siya Chen <br />
+      Logan, UT 84341, USA
+    </address>
+  </footer>
 
 </body>
 
